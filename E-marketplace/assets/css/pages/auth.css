@@ -1,0 +1,225 @@
+/*-----------------------------AUTH PAGE-----------------------------*/
+
+.auth-page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem 1rem;
+
+    background: #f5f5f5;
+}
+
+/*-----------------------------FORM CONTAINERS-----------------------------*/
+
+.login-form-container,
+.register-form-container,
+.welcome-container{
+    background: white;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 2.5rem;
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* HEADINGS */
+
+.login-form-container h1,
+.register-form-container h1{
+    text-align: center;
+    margin-bottom: 2rem;
+
+    font-size: 2rem;
+    color: #111;
+}
+
+/*-----------------------------FORM GROUPS-----------------------------*/
+
+.login-form-group,
+.register-form-group{
+    margin-bottom: 1.2rem;
+}
+
+/* LABELS */
+
+.login-form-group label,
+.register-form-group label{
+    display: block;
+    margin-bottom: 0.5rem;
+
+    font-weight: 600;
+    color: #333;
+}
+
+/* INPUTS */
+
+.login-form-group input,
+.register-form-group input{
+    width: 100%;
+
+    padding: 0.95rem 1rem;
+
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+
+    font-size: 1rem;
+
+    background: #fafafa;
+
+    transition: 0.3s ease;
+}
+
+/* INPUT FOCUS */
+
+.login-form-group input:focus,
+.register-form-group input:focus{
+    outline: none;
+
+    border-color: #4678ad;
+
+    background: white;
+
+    box-shadow: 0 0 0 4px rgba(70,120,173,0.12);
+}
+
+/*-----------------------------BUTTONS-----------------------------*/
+
+.login-btn,
+.register-btn{
+    width: 100%;
+
+    background: #007bff;
+    color: white;
+
+    border: none;
+
+    padding: 1rem;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.login-btn:hover,
+.register-btn:hover{
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/*-----------------------------LINKS-----------------------------*/
+
+.switch-link{
+    margin-top: 1.5rem;
+    text-align: center;
+
+    color: #666;
+}
+
+.switch-link a{
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.switch-link a:hover{
+    text-decoration: underline;
+}
+
+/*-----------------------------ERROR BOX-----------------------------*/
+
+.error-box{
+    background: #ffe5e5;
+    border: 1px solid #ffb3b3;
+
+    color: #cc0000;
+
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+.error-message{
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+/*-----------------------------SUCCESS BOX-----------------------------*/
+
+.success-box{
+    background: #e5ffe8;
+    border: 1px solid #9be7a1;
+
+    color: #146c2e;
+
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+/*-----------------------------Respondsive design-----------------------------*/
+
+/* Tablet */
+@media (max-width: 992px){
+
+    .auth-page{
+        padding: 3rem 1.5rem;
+    }
+
+    .login-form-container,
+    .register-form-container,
+    .welcome-container{
+        max-width: 450px;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 768px){
+
+    .auth-page{
+        padding: 2rem 1rem;
+        align-items: center;
+    }
+
+    .login-form-container,
+    .register-form-container,
+    .welcome-container{
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .login-form-container h1,
+    .register-form-container h1{
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .login-form-group input,
+    .register-form-group input{
+        padding: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    .login-btn,
+    .register-btn{
+        padding: 0.9rem;
+    }
+
+    .switch-link{
+        font-size: 0.95rem;
+    }
+}

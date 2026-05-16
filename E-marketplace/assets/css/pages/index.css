@@ -1,0 +1,211 @@
+/*-------------------------Categories-----------------------------------*/
+.categories {
+  text-align: center;
+  padding: 40px;
+  background: #f5f5f5;
+}
+
+.category-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.category-card {
+  width: 100%;
+  max-width: 250px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Image container */
+.image-box {
+  position: relative; /* IMPORTANT */
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Image */
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay (hidden by default) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5); /* grey/dark overlay */
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Text inside overlay */
+.overlay span {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #4a7ecb;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+/* Hover effect */
+.image-box:hover .overlay {
+  opacity: 1;
+}
+
+/*-----------------------------------Recently added-----------------------------------*/
+.recently-added {
+  padding: 40px;
+  background: #e6f2ff;
+}
+
+.recently-added h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Grid layout */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.product-card {
+  display: block;
+  text-decoration: none; /* removes underline */
+  color: black;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.product-image {
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* "New" badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+/* Price */
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Button */
+.product-card button {
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #0056b3;
+}
+
+
+/*-----------------------------Responsive design-----------------------------*/
+/*Tablet*/
+@media (max-width: 992px){
+
+  .categories,
+  .recently-added{
+    padding: 30px 20px;
+  }
+
+  .category-container{
+    gap: 20px;
+  }
+
+  .products{
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .product-image img{
+    height: 160px;
+  }
+
+}
+
+/*Smartphone*/
+@media (max-width: 768px){
+
+  .categories,
+  .recently-added{
+    padding: 20px 15px;
+  }
+
+  .categories h2,
+  .recently-added h2{
+    font-size: 1.8rem;
+  }
+
+  .category-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .category-card{
+    max-width: 100%;
+  }
+
+  .image-box{
+    height: 220px;
+  }
+
+  .products{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .product-image img{
+    height: 140px;
+  }
+
+  .product-card button{
+    width: 100%;
+    padding: 12px;
+  }
+
+}

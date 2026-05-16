@@ -1,0 +1,70 @@
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4678ad;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Basic CTA button styling */
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+ 
+.button:hover {
+    background-color: #538dcc;
+}
+
+
+/*Specific buttons*/
+.btn-cart,
+.btn-user {
+  background: none;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Icon inside button */
+.btn-cart i,
+.btn-user i {
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+/* 🔥 Hover glow effect */
+.btn-cart:hover,
+.btn-user:hover {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+}
+
+/* Change icon color on hover */
+.btn-cart:hover i,
+.btn-user:hover i {
+  color: #007bff;
+}
+
+
+
+
+/*-----------------------------Responsive design-----------------------------*/
+/*Tablet*/
+@media (max-width: 992px){
+
+}
+
+/*Smartphone*/
+@media (max-width: 768px){
+
+}

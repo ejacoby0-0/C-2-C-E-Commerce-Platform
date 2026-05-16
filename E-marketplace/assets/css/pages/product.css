@@ -1,0 +1,253 @@
+/* -----------------------------PRODUCT PAGE-----------------------------*/
+
+.product-page{
+    padding: 3rem 2rem;
+}
+
+/* Main centered container */
+
+.product-layout{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+/*-----------------------------LEFT SIDE-----------------------------*/
+
+.product-gallery{
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Image wrapper */
+
+.main-image-wrapper{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #f5f5f5;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Fixed image sizing */
+
+.main-product-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*-----------------------------RIGHT SIDE-----------------------------*/
+
+.product-details{
+    width: 420px;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Title */
+
+.product-title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Price */
+
+.product-price{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 2rem;
+}
+
+/*-----------------------------SELLER-----------------------------*/
+
+.seller-box {
+    margin-top: 30px;
+}
+
+.seller-box a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.seller-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*-----------------------------META-----------------------------*/
+
+.product-meta{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/*-----------------------------DESCRIPTION-----------------------------*/
+
+.description-box{
+    margin-bottom: 2rem;
+}
+
+.description-box h3{
+    margin-bottom: 1rem;
+}
+
+/*-----------------------------BUTTONS-----------------------------*/
+
+.product-actions{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.buy-btn,
+.cart-btn,
+.wishlist-btn,
+.login-buy-btn{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Buy */
+.buy-btn{
+    background: #007bff;
+    color: white;
+}
+
+.buy-btn:hover{
+    background: #0056b3;
+}
+
+/* Cart */
+.cart-btn{
+    background: #f5f5f5;
+}
+
+.cart-btn:hover{
+    background: #e5e5e5;
+}
+
+/* Login */
+.login-buy-btn{
+    background: black;
+    color: white;
+}
+
+/* Own Product */
+.own-product-box{
+    background: #f3f3f3;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+/*-----------------------------Responsive design-----------------------------*/
+/*Tablet*/
+@media (max-width: 992px) {
+
+  .product-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-gallery {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .product-details {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .product-title {
+    font-size: 1.8rem;
+  }
+
+  .product-price {
+    font-size: 1.6rem;
+  }
+}
+
+
+/*Smartphone*/
+@media (max-width: 768px) {
+
+  .product-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .product-layout {
+    gap: 1.5rem;
+  }
+
+  .main-image-wrapper {
+    border-radius: 12px;
+  }
+
+  .product-details {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .product-price {
+    font-size: 1.4rem;
+  }
+
+  .seller-box a {
+    flex-direction: row;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .seller-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .product-actions {
+    gap: 0.75rem;
+  }
+
+  .buy-btn,
+  .cart-btn,
+  .wishlist-btn,
+  .login-buy-btn {
+    padding: 0.85rem;
+    font-size: 0.95rem;
+  }
+}

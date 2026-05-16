@@ -1,0 +1,146 @@
+/*-----------------------------Success page-----------------------------*/
+.success-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f7f7f7;
+}
+
+.success-card {
+    background: white;
+    padding: 50px;
+    border-radius: 18px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.success-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: #22c55e;
+    color: white;
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.success-card h1 {
+    margin-bottom: 16px;
+    font-size: 32px;
+}
+
+.success-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.success-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.success-btn,
+.continue-btn {
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.success-btn {
+    background: #007bff;
+    color: white;
+}
+
+.success-btn:hover {
+    background: #007bff;
+}
+
+.continue-btn {
+    border: 1px solid #ddd;
+    color: #333;
+    background: white;
+}
+
+.continue-btn:hover {
+    background: #f3f3f3;
+}
+
+/*-----------------------------Responsive design-----------------------------*/
+
+/*Tablet*/
+@media (max-width: 992px){
+
+    .success-page{
+        padding: 30px 20px;
+    }
+
+    .success-card{
+        max-width: 450px;
+        padding: 40px 30px;
+    }
+
+    .success-card h1{
+        font-size: 28px;
+    }
+
+    .success-card p{
+        font-size: 15px;
+    }
+
+}
+
+/* Smartphone */
+@media (max-width: 768px){
+
+    .success-page{
+        padding: 20px 15px;
+        min-height: 70vh;
+    }
+
+    .success-card{
+        padding: 30px 20px;
+        border-radius: 14px;
+    }
+
+    .success-icon{
+        width: 75px;
+        height: 75px;
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    .success-card h1{
+        font-size: 24px;
+    }
+
+    .success-card p{
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .success-actions{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .success-btn,
+    .continue-btn{
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+    }
+
+}

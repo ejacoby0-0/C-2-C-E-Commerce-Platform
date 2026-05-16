@@ -1,0 +1,235 @@
+/* -----------------------------Create Listing page-----------------------------*/
+
+.listing-page{
+    min-height: 100vh;
+    background: #f5f7fb;
+    padding: 4rem 1.5rem;
+}
+
+/*-----------------------------HERO-----------------------------*/
+
+.listing-hero{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.listing-hero h1{
+    font-size: 3rem;
+    color: #111;
+    margin-bottom: 1rem;
+}
+
+.listing-hero p{
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/*-----------------------------FORM CONTAINER-----------------------------*/
+
+.listing-container{
+    display: flex;
+    justify-content: center;
+}
+
+.listing-form-box{
+    width: 100%;
+    max-width: 750px;
+    background: white;
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/*-----------------------------FORM-----------------------------*/
+
+.listing-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/*-----------------------------FORM GROUPS-----------------------------*/
+
+.listing-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.listing-group label{
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+    color: #222;
+    font-size: 0.95rem;
+}
+
+.listing-group small{
+    margin-top: 0.7rem;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/*-----------------------------INPUTS-----------------------------*/
+
+.listing-group input,
+.listing-group textarea,
+.listing-group select{
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #d8dce3;
+    border-radius: 14px;
+    background: #fafafa;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* Focus */
+
+.listing-group input:focus,
+.listing-group textarea:focus,
+.listing-group select:focus{
+    outline: none;
+    border-color: #4678ad;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(70,120,173,0.12);
+}
+
+/* Textarea */
+
+.listing-group textarea{
+    min-height: 180px;
+    resize: vertical;
+}
+
+/*-----------------------------FILE INPUT-----------------------------*/
+
+.listing-group input[type="file"]{
+    padding: 1rem;
+    border: 2px dashed #c8d4e4;
+    background: #f8fbff;
+    cursor: pointer;
+}
+
+/*-----------------------------BUTTON-----------------------------*/
+
+.create-btn{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 14px;
+    background: #4678ad;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 1rem;
+}
+
+.create-btn:hover{
+    background: #315b87;
+    transform: translateY(-2px);
+}
+
+/*-----------------------------Responsive Design-----------------------------*/
+
+/* Tablet */
+@media (max-width: 992px){
+
+    .listing-page{
+        padding: 3rem 1.5rem;
+    }
+
+    .listing-hero{
+        margin-bottom: 2.5rem;
+    }
+
+    .listing-hero h1{
+        font-size: 2.5rem;
+    }
+
+    .listing-hero p{
+        font-size: 1rem;
+    }
+
+    .listing-form-box{
+        max-width: 100%;
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .listing-group input,
+    .listing-group textarea,
+    .listing-group select{
+        padding: 0.95rem;
+    }
+}
+
+
+/* Smartphone */
+@media (max-width: 768px){
+
+    .listing-page{
+        padding: 2rem 1rem;
+    }
+
+    .listing-hero{
+        margin-bottom: 2rem;
+    }
+
+    .listing-hero h1{
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .listing-hero p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .listing-container{
+        width: 100%;
+    }
+
+    .listing-form-box{
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .listing-form{
+        gap: 1.2rem;
+    }
+
+    .listing-group label{
+        font-size: 0.9rem;
+    }
+
+    .listing-group input,
+    .listing-group textarea,
+    .listing-group select{
+        padding: 0.9rem;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+
+    .listing-group textarea{
+        min-height: 140px;
+    }
+
+    .listing-group input[type="file"]{
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .listing-group small{
+        font-size: 0.8rem;
+    }
+
+    .create-btn{
+        padding: 0.95rem;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+}

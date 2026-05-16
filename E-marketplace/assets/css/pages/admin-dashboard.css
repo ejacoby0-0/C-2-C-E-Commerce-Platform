@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-bottom: 3px solid #2563eb;
+  color: #2563eb;
+}
+
+.content {
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.blue { background: #dbeafe; color: #1e40af; }
+.green { background: #d1fae5; color: #065f46; }
+.yellow { background: #fef3c7; color: #92400e; }
+
+.center {
+  text-align: center;
+  padding: 40px;
+}
+
+
+/*-----------------------------Responsive design-----------------------------*/
+/*Tablet*/
+@media (max-width: 992px){
+
+}
+
+/*Smartphone*/
+@media (max-width: 768px){
+
+}

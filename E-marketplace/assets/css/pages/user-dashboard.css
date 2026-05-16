@@ -1,0 +1,323 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-bottom: 3px solid #2563eb;
+  color: #2563eb;
+}
+
+.content {
+  padding: 20px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 250px;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.blue { background: #dbeafe; color: #1e40af; }
+.green { background: #d1fae5; color: #065f46; }
+.yellow { background: #fef3c7; color: #92400e; }
+
+.center {
+  text-align: center;
+  padding: 40px;
+}
+
+
+/*-------------------------------My profile section-------------------------------*/
+.profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.profile-form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.profile-image-preview {
+    margin-bottom: 20px;
+}
+
+.profile-image-preview img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.save-btn {
+    background: #4678ad;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.save-btn:hover {
+    background: #4678ad;
+}
+
+.product-card-image-wrapper{
+    position: relative;
+}
+
+.sold-badge{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    background: #4678ad;
+    color: white;
+
+    padding: 6px 12px;
+    border-radius: 30px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.product-card.sold{
+    opacity: 0.75;
+}
+
+
+
+/*-----------------------------Responsive design-----------------------------*/
+/*Tablet*/
+@media (max-width: 992px) {
+
+  .container {
+    padding: 16px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .tab {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  .profile-form {
+    padding: 1.5rem;
+  }
+}
+
+/*Smartphone*/
+@media (max-width: 768px) {
+
+  .container {
+    padding: 12px;
+  }
+
+  /* ---------------- TABS ---------------- */
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  /* ---------------- GRID ---------------- */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---------------- TABLE ---------------- */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  /* ---------------- INPUTS ---------------- */
+  .input {
+    width: 100%;
+  }
+
+  /* ---------------- PROFILE ---------------- */
+  .profile-header {
+    padding: 1rem;
+  }
+
+  .profile-form {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .profile-image-preview img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .save-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* ---------------- CENTER TEXT ---------------- */
+  .center {
+    padding: 20px;
+    font-size: 14px;
+  }
+}

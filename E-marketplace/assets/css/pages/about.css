@@ -1,0 +1,449 @@
+/*------------------------------------Heor banner-------------------------------*/
+.hero-image {
+  background-color: #4678ad; 
+  height: 50vh; /* Adjust height as needed */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+
+
+/* Centered content */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+
+/*-----------------------------------------------------About section-----------------------------------------------------*/
+.about-section{
+  padding: 40px;
+  background: #e6f2ff;
+  text-align: center;
+}
+
+
+
+
+
+/*------------------------------------Service Section-------------------------------*/
+.services-section{
+    padding: 5rem 2rem;
+    background: #fafafa;
+}
+
+.services-header{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.services-header h2{
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.services-header p{
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* GRID */
+.services-grid{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* CARD */
+
+.service-card{
+    background: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.service-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* ACTIVE CARD */
+
+.active-service{
+    background: #dfeee2;
+}
+
+/* ICON */
+
+.service-icon{
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+/* TITLE */
+
+.service-card h3{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+/* TEXT */
+
+.service-card p{
+    color: #666;
+    line-height: 1.6;
+}
+
+/*-----------------------------WHY US SECTION-----------------------------*/
+
+.why-us-section{
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.why-us-header{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.why-us-header h2{
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.why-us-header p{
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.why-us-grid{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 2rem;
+}
+
+.why-card{
+    background: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+
+.why-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.why-card h3{
+    margin-bottom: 1rem;
+}
+
+/* -----------------------------STATS-----------------------------*/
+
+.stats-section{
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.stats-grid{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 2rem;
+}
+
+.stat-card{
+    background: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.stat-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.stat-card h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+/*-----------------------------Ready to start-----------------------------*/
+
+.about-cta{
+    padding: 6rem 2rem;
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+.about-cta h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-cta p{
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.about-cta-btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #007bff;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.about-cta-btn:hover{
+    transform: translateY(-4px);
+}
+
+
+
+/*-----------------------------Responsive design-----------------------------*/
+/*Tablet*/
+@media (max-width: 992px){
+
+    /* HERO */
+    .hero-image{
+        height: 40vh;
+    }
+
+    .hero-text h1{
+        font-size: 2.5rem;
+    }
+
+    .hero-text p{
+        font-size: 1rem;
+    }
+
+    /* ABOUT */
+    .about-section{
+        padding: 3rem 2rem;
+    }
+
+    /* SERVICES */
+    .services-section{
+        padding: 4rem 1.5rem;
+    }
+
+    .services-header h2{
+        font-size: 2.5rem;
+    }
+
+    .services-grid{
+        gap: 1.5rem;
+    }
+
+    .service-card{
+        padding: 2.5rem 1.5rem;
+    }
+
+    /* WHY US */
+    .why-us-section{
+        padding: 4rem 1.5rem;
+    }
+
+    .why-us-header h2{
+        font-size: 2.4rem;
+    }
+
+    .why-card{
+        padding: 2.5rem 1.5rem;
+    }
+
+    /* STATS */
+    .stats-section{
+        padding: 4rem 1.5rem;
+    }
+
+    .stat-card{
+        padding: 2.5rem 1.5rem;
+    }
+
+    .stat-card h2{
+        font-size: 2.5rem;
+    }
+
+    /* CTA */
+    .about-cta{
+        padding: 5rem 1.5rem;
+    }
+
+    .about-cta h2{
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Smartphone */
+@media (max-width: 768px){
+
+    /* HERO */
+    .hero-image{
+        height: 35vh;
+    }
+
+    .hero-text{
+        width: 90%;
+    }
+
+    .hero-text h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-text p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* ABOUT */
+    .about-section{
+        padding: 2.5rem 1rem;
+    }
+
+    .about-section h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-section p{
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    /* SERVICES */
+    .services-section{
+        padding: 3rem 1rem;
+    }
+
+    .services-header{
+        margin-bottom: 2.5rem;
+    }
+
+    .services-header h2{
+        font-size: 2rem;
+    }
+
+    .services-header p{
+        font-size: 0.95rem;
+    }
+
+    .services-grid{
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .service-card{
+        padding: 2rem 1.5rem;
+    }
+
+    .service-icon{
+        font-size: 3rem;
+    }
+
+    .service-card h3{
+        font-size: 1.2rem;
+    }
+
+    /* WHY US */
+    .why-us-section{
+        padding: 3rem 1rem;
+    }
+
+    .why-us-header{
+        margin-bottom: 2.5rem;
+    }
+
+    .why-us-header h2{
+        font-size: 2rem;
+    }
+
+    .why-us-header p{
+        font-size: 0.95rem;
+    }
+
+    .why-us-grid{
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .why-card{
+        padding: 2rem 1.5rem;
+    }
+
+    /* STATS */
+    .stats-section{
+        padding: 3rem 1rem;
+    }
+
+    .stats-grid{
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .stat-card{
+        padding: 2rem 1.5rem;
+    }
+
+    .stat-card h2{
+        font-size: 2rem;
+    }
+
+    /* CTA */
+    .about-cta{
+        padding: 4rem 1rem;
+    }
+
+    .about-cta h2{
+        font-size: 2rem;
+    }
+
+    .about-cta p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .about-cta-btn{
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
