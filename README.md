@@ -22,7 +22,7 @@ This project is a C2C e-commerce platform
 
 ## Prerequisite
 
-This is the schema I used for my website
+This is the schema I used for my database:
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
@@ -42,3 +42,51 @@ CREATE TABLE `users` (
   `instagram` varchar(100) DEFAULT NULL
 )
 
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `seller_id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `status` enum('active','sold','pending','removed') DEFAULT 'pending',
+  `location` varchar(255) DEFAULT NULL,
+  `views` int(11) DEFAULT 0,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `product_condition` enum('new','like new','good','fair') DEFAULT 'good'
+)
+
+CREATE TABLE `product_images` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `image_path` varchar(255) NOT NULL,
+  `is_primary` tinyint(1) DEFAULT 0
+)
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `buyer_id` int(11) NOT NULL,
+  `seller_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `total_amount` decimal(10,2) NOT NULL,
+  `shipping_address` text NOT NULL,
+  `status` enum('pending','paid','shipped','delivered','cancelled','disputed') DEFAULT 'pending',
+  `payment_reference` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `payment_method` varchar(50) DEFAULT NULL
+)
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `slug` varchar(100) NOT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `icon` varchar(50) DEFAULT NULL
+)
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `added_at` timestamp NOT NULL DEFAULT current_timestamp()
+)
