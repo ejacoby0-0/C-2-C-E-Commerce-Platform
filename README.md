@@ -44,8 +44,7 @@ To use this repo, you will need to get a local copy up and running. Follow these
    ```
 
  2. This is the schema I used for my database:
-  ```
-  
+  ```sh
   CREATE TABLE `users` (
     `id` int(11) NOT NULL,
     `email` varchar(255) NOT NULL,
