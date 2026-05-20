@@ -29,7 +29,7 @@ To use this repo, you will need to get a local copy up and running. Follow these
 
   ```sh
   -VS code
-  -Xammp
+  -Xampp
     |-Apache(To run the website locally)
     |-MySQL(To store and manage the database)
   -No npm (Node Package Manager) used for this project
