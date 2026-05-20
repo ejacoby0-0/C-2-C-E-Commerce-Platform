@@ -39,7 +39,7 @@ To use this repo, you will need to get a local copy up and running. Follow these
 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/ejacoby0-0/C-2-C-E-Commercere-Platform.git
+   git clone https://github.com/ejacoby0-0/C-2-C-E-Commerce-Platform
    cd C-2-C-E-Commercere-Platform
    ```
 
