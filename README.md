@@ -27,12 +27,12 @@ To use this repo, you will need to get a local copy up and running. Follow these
 
 ### Prerequisites
 
-* npm
   ```sh
   VS code
   Xammp
     Apache(To run the website locally)
     MySQL(To store and manage the database)
+  No npm (Node Package Manager) used for this project
   ```
 
 ### Installation
@@ -41,14 +41,6 @@ To use this repo, you will need to get a local copy up and running. Follow these
    ```sh
    git clone https://github.com/ejacoby0-0/C-2-C-E-Commercere-Platform.git
    cd C-2-C-E-Commercere-Platform
-   ```
-2. Install NPM packages (or relevant dependencies):
-   ```sh
-   npm install
-   ```
-3. Set up your environment variables (or enter your API keys):
-   ```sh
-   const API_KEY = 'ENTER YOUR API';
    ```
 
 This is the schema I used for my database:
