@@ -1,7 +1,9 @@
 # C-2-C-E-Commerce-Platform
 
 ## Project Overview
-This project is a C2C e-commerce platform
+This project is a C2C e-commerce platform. 
+
+The purpose of this project is to provide a digital environment where customers can sell and purchase products online without worrying about fraudulent activities, promoting a secure and safe marketplace.
 
 ## Tech Stack
 1. Frontend/Languages: HTML, CSS, JavaScript
