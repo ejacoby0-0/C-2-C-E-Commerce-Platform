@@ -28,11 +28,11 @@ To use this repo, you will need to get a local copy up and running. Follow these
 ### Prerequisites
 
   ```sh
-  VS code
-  Xammp
+  *VS code
+  *Xammp
     Apache(To run the website locally)
     MySQL(To store and manage the database)
-  No npm (Node Package Manager) used for this project
+  *No npm (Node Package Manager) used for this project
   ```
 
 ### Installation
