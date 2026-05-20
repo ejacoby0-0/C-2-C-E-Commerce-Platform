@@ -27,17 +27,20 @@ To use this repo, you will need to get a local copy up and running. Follow these
 
 ### Prerequisites
 
-List any prerequisites required before installing (e.g., Node.js, Python, API keys).
 * npm
   ```sh
-  npm install npm@latest -g
+  VS code
+  Xammp
+    Apache(To run the website locally)
+    MySQL(To store and manage the database)
   ```
 
 ### Installation
 
 1. Clone the repo:
    ```sh
-   git clone https://github.com
+   git clone https://github.com/ejacoby0-0/C-2-C-E-Commercere-Platform.git
+   cd C-2-C-E-Commercere-Platform
    ```
 2. Install NPM packages (or relevant dependencies):
    ```sh
