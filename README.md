@@ -20,7 +20,31 @@ This project is a C2C e-commerce platform
 8. Product Management System
 
 
-## Prerequisite
+## Getting Started
+To use this repo, you will need to get a local copy up and running. Follow these steps.
+
+### Prerequisites
+
+List any prerequisites required before installing (e.g., Node.js, Python, API keys).
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo:
+   ```sh
+   git clone https://github.com
+   ```
+2. Install NPM packages (or relevant dependencies):
+   ```sh
+   npm install
+   ```
+3. Set up your environment variables (or enter your API keys):
+   ```sh
+   const API_KEY = 'ENTER YOUR API';
+   ```
 
 This is the schema I used for my database:
 
