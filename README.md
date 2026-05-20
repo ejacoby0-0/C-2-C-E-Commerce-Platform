@@ -48,6 +48,8 @@ List any prerequisites required before installing (e.g., Node.js, Python, API ke
 
 This is the schema I used for my database:
 
+```
+
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -114,3 +116,5 @@ CREATE TABLE `cart` (
   `product_id` int(11) NOT NULL,
   `added_at` timestamp NOT NULL DEFAULT current_timestamp()
 )
+
+```
