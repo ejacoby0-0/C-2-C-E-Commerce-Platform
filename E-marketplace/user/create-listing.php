@@ -1,5 +1,6 @@
 <?php
 require_once "../config/auth_check.php";
+require_once "../config/session.php";
 require_once "../config/db.php";
 
 $pageTitle = "Create Listing";

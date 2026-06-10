@@ -1,5 +1,6 @@
 <?php
 require_once "../config/auth_check.php";
+require_once "../config/session.php";
 require_once "../config/db.php";
 
 $pageTitle = "My Profile";
@@ -159,9 +160,26 @@ $revenue = $stmt->get_result()->fetch_assoc()['total_revenue'] ?? 0;
 
                                 
                                 <td>
-                                    <a href="edit-product.php?id=<?php echo $product['id']; ?>">Edit</a> |
-                                    <a href="delete-product.php?id=<?php echo $product['id']; ?>"onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>    
-                                </td>
+                                    <?php if($product['status'] !== 'sold'): ?>
+
+                                        <a href="edit-product.php?id=<?php echo $product['id']; ?>">
+                                            Edit
+                                        </a>
+
+                                    <?php else: ?>
+
+                                        <span class="disabled-action">
+                                            Sold
+                                        </span>
+
+                                    <?php endif; ?>
+
+                                    |
+
+                                    <a href="delete-product.php?id=<?php echo $product['id']; ?>"
+                                    onclick="return confirm('Are you sure you want to delete this product?');">
+                                        Delete
+                                    </a>
                             </tr>
                             <?php endwhile; ?>
                         </tbody>

@@ -1,5 +1,4 @@
 <?php
-
 require_once "../config/admin_check.php";
 require_once "../config/db.php";
 
@@ -84,55 +83,57 @@ $revenue = $revenue_result->fetch_assoc()['total_revenue'] ?? 0;
                 <h3>User Management</h3>
                 <input type="text" placeholder="Search users..." class="input" />
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>User</th>
-                            <th>Role</th>
-                            <th>Join Date</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                <tbody>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Role</th>
+                                <th>Join Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                <?php while($user = $users->fetch_assoc()): ?>
-                <tr>
-                    <td>
-                        <?php echo $user['username']; ?><br>
-                        <small><?php echo $user['email']; ?></small>
-                    </td>
+                            <?php while($user = $users->fetch_assoc()): ?>
+                            <tr>
+                                <td>
+                                    <?php echo $user['username']; ?><br>
+                                    <small><?php echo $user['email']; ?></small>
+                                </td>
 
-                    <td><?php echo $user['user_type']; ?></td>
+                                <td><?php echo $user['user_type']; ?></td>
 
-                    <td><?php echo $user['created_at']; ?></td>
+                                <td><?php echo $user['created_at']; ?></td>
 
-                    <td>
-                        <?php if ($user['status'] === 'active'): ?>
-                                <span class="badge green">Active</span>
-                            <?php else: ?>
-                                <span class="badge red">Suspended</span>
-                            <?php endif; ?>
-                    </td>
+                                <td>
+                                    <?php if ($user['status'] === 'active'): ?>
+                                            <span class="badge green">Active</span>
+                                        <?php else: ?>
+                                            <span class="badge red">Suspended</span>
+                                        <?php endif; ?>
+                                </td>
 
-                    <td>
-                        <?php if ($user['status'] === 'active'): ?>
-                            <a href="remove_user.php?id=<?php echo $user['id']; ?>"
-                            onclick="return confirm('Suspend this user?');">
-                            Suspend
-                            </a>
-                        <?php else: ?>
-                            <a href="activate_user.php?id=<?php echo $user['id']; ?>">
-                            Activate
-                            </a>
-                        <?php endif; ?>
-                    </td>
+                                <td>
+                                    <?php if ($user['status'] === 'active'): ?>
+                                        <a href="remove_user.php?id=<?php echo $user['id']; ?>"
+                                        onclick="return confirm('Suspend this user?');">
+                                        Suspend
+                                        </a>
+                                    <?php else: ?>
+                                        <a href="activate_user.php?id=<?php echo $user['id']; ?>">
+                                        Activate
+                                        </a>
+                                    <?php endif; ?>
+                                </td>
 
-                </tr>
-                <?php endwhile; ?>
+                            </tr>
+                            <?php endwhile; ?>
 
-                </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
 
             </div>
 
@@ -151,46 +152,49 @@ $revenue = $revenue_result->fetch_assoc()['total_revenue'] ?? 0;
             <div id="products" class="tab-content">
                 <h3>Product Moderation</h3>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Seller</th>
-                            <th>Category</th>
-                            <th>Price</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Seller</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
 
-                <tbody>
-                <?php while($product = $products->fetch_assoc()): ?>
-                <tr>
-                    <td><?php echo $product['title']; ?></td>
-                    <td><?php echo $product['username']; ?></td>
-                    <td>R<?php echo $product['price']; ?></td>
+                        <tbody>
+                            <?php while($product = $products->fetch_assoc()): ?>
+                            <tr>
+                                <td><?php echo $product['title']; ?></td>
+                                <td><?php echo $product['username']; ?></td>
+                                <td><?php echo $product['category_name']; ?></td>
+                                <td>R<?php echo $product['price']; ?></td>
 
-                    <td>
-                        <span class="badge">
-                            <?php echo strtoupper($product['status']); ?>
-                        </span>
-                    </td>
+                                <td>
+                                    <span class="badge <?php echo $product['status']; ?>">
+                                        <?php echo ucfirst($product['status']); ?>
+                                    </span>
+                                </td>
 
-                    <td>
-                        <?php if ($product['status'] === 'pending'): ?>
-                            <a href="approve_product.php?id=<?php echo $product['id']; ?>">Approve</a>
-                            |
-                            <a href="remove_product.php?id=<?php echo $product['id']; ?>">Reject</a>
-                        <?php elseif ($product['status'] === 'active'): ?>
-                            <a href="remove_product.php?id=<?php echo $product['id']; ?>">Remove</a>
-                        <?php else: ?>
-                            <span>—</span>
-                        <?php endif; ?>
-                    </td>
-                </tr>
-                <?php endwhile; ?>
-                </tbody>
-                </table>
+                                <td>
+                                    <?php if ($product['status'] === 'pending'): ?>
+                                        <a href="approve_product.php?id=<?php echo $product['id']; ?>">Approve</a>
+                                        |
+                                        <a href="remove_product.php?id=<?php echo $product['id']; ?>">Reject</a>
+                                    <?php elseif ($product['status'] === 'active'): ?>
+                                        <a href="remove_product.php?id=<?php echo $product['id']; ?>">Remove</a>
+                                    <?php else: ?>
+                                        <span>—</span>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Orders Management-->
@@ -212,58 +216,62 @@ $revenue = $revenue_result->fetch_assoc()['total_revenue'] ?? 0;
             <div id="orders" class="tab-content">
                 <h3>Order Management</h3>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Product</th>
-                            <th>Buyer</th>
-                            <th>Seller</th>
-                            <th>Amount</th>
-                            <th>Status</th>
-                            <th>Date</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Product</th>
+                                <th>Buyer</th>
+                                <th>Seller</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <?php while($order = $result->fetch_assoc()): ?>
-                        <tr>
-                            <td><?php echo $order['id']; ?></td>
-                            <td><?php echo $order['product_title']; ?></td>
-                            <td><?php echo $order['buyer_name']; ?></td>
-                            <td><?php echo $order['seller_name']; ?></td>
-                            <td>R<?php echo $order['total_amount']; ?></td>
+                        <tbody>
+                            <?php while($order = $result->fetch_assoc()): ?>
+                            <tr>
+                                <td><?php echo $order['id']; ?></td>
+                                <td><?php echo $order['product_title']; ?></td>
+                                <td><?php echo $order['buyer_name']; ?></td>
+                                <td><?php echo $order['seller_name']; ?></td>
+                                <td>R<?php echo number_format($order['total_amount'],2); ?></td>
 
-                            <td>
-                                <span class="badge <?php echo $order['status']; ?>">
-                            </td>
+                                <td>
+                                    <span class="badge <?php echo $order['status']; ?>">
+                                        <?php echo ucfirst($order['status']); ?>
+                                    </span>
+                                </td>
 
-                            <td><?php echo $order['created_at']; ?></td>
+                                <td><?php echo $order['created_at']; ?></td>
 
-                            <td>
-                                <form method="POST" action="update_order.php">
-                                    <input type="hidden" name="order_id" value="<?php echo $order['id']; ?>">
+                                <td>
+                                    <form method="POST" action="update_order.php">
+                                        <input type="hidden" name="order_id" value="<?php echo $order['id']; ?>">
 
-                                    <select name="status">
-                                        <?php
-                                        $statuses = ['pending','paid','shipped','delivered','cancelled'];
-                                        foreach ($statuses as $s):
-                                        ?>
-                                            <option value="<?php echo $s; ?>" 
-                                                <?php if($order['status'] === $s) echo 'selected'; ?>>
-                                                <?php echo ucfirst($s); ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                    </select>
+                                        <select name="status">
+                                            <?php
+                                            $statuses = ['pending','paid','shipped','delivered','cancelled'];
+                                            foreach ($statuses as $s):
+                                            ?>
+                                                <option value="<?php echo $s; ?>" 
+                                                    <?php if($order['status'] === $s) echo 'selected'; ?>>
+                                                    <?php echo ucfirst($s); ?>
+                                                </option>
+                                            <?php endforeach; ?>
+                                        </select>
 
-                                    <button type="submit">Update</button>
-                                </form>
-                            </td>
-                        </tr>
-                        <?php endwhile; ?>
-                    </tbody>
-                </table>
+                                        <button type="submit">Update</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

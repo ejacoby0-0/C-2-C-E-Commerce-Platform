@@ -24,6 +24,7 @@ body {
 
 .card {
   background: white;
+  overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -40,9 +41,11 @@ body {
   cursor: pointer;
 }
 
-.tab.active {
-  border-bottom: 3px solid #2563eb;
-  color: #2563eb;
+.tab.active{
+    border-bottom: 3px solid #2563eb;
+    color: #2563eb;
+    font-weight: 600;
+    background: #eff6ff;
 }
 
 .content {
@@ -63,17 +66,28 @@ body {
   gap: 20px;
 }
 
-.stat-card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
+.stat-card{
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.stat-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.table-wrapper{
+    overflow-x: auto;
+    width: 100%;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
+  min-width: 700px;
 }
+
+
 
 th, td {
   padding: 12px;
@@ -82,34 +96,166 @@ th, td {
 }
 
 .input {
-  padding: 10px;
-  margin: 10px 0;
-  width: 250px;
+   width: 100%;
+   max-width: 300px;
+   border: 1px solid #ddd;
+   border-radius: 8px;
 }
 
-.badge {
-  padding: 4px 8px;
-  border-radius: 20px;
-  font-size: 12px;
+/*-----------------------------BADGES-----------------------------*/
+
+table .badge{
+    position: static !important;
+
+    display: inline-block;
+
+    padding: 6px 12px;
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: center;
+    white-space: nowrap;
+
+    top: auto !important;
+    left: auto !important;
 }
 
-.blue { background: #dbeafe; color: #1e40af; }
-.green { background: #d1fae5; color: #065f46; }
-.yellow { background: #fef3c7; color: #92400e; }
+/* User status */
 
-.center {
-  text-align: center;
-  padding: 40px;
+.green{
+    background:#d1fae5;
+    color:#065f46;
 }
+
+.red{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+/* Order/Product statuses */
+
+.pending{
+    background:#fef3c7;
+    color:#92400e;
+}
+
+.paid{
+    background:#dbeafe;
+    color:#1e40af;
+}
+
+.shipped{
+    background:#ede9fe;
+    color:#5b21b6;
+}
+
+.delivered{
+    background:#d1fae5;
+    color:#065f46;
+}
+
+.cancelled{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
 
 
 /*-----------------------------Responsive design-----------------------------*/
 /*Tablet*/
 @media (max-width: 992px){
 
+    .container{
+        padding: 15px;
+    }
+
+    /* Dashboard stats become smaller */
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    /* Tabs wrap if needed */
+    .tabs{
+        flex-wrap: wrap;
+    }
+
+    .tab{
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .content{
+        padding: 15px;
+    }
+
+    th,
+    td{
+        padding: 10px;
+        font-size: 14px;
+    }
+
 }
 
 /*Smartphone*/
-@media (max-width: 768px){
+@media (max-width:768px){
+
+    .container{
+        padding: 10px;
+    }
+
+    .header h1{
+        font-size: 1.7rem;
+    }
+
+    /* One card per row */
+    .grid{
+        grid-template-columns: 1fr;
+    }
+
+    /* Tabs become stacked */
+    .tabs{
+        flex-direction: column;
+    }
+
+    .tab{
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .tab.active{
+        border-bottom: none;
+        border-left: 4px solid #2563eb;
+    }
+
+    .content{
+        padding: 12px;
+    }
+
+    /* Smaller table text */
+    th,
+    td{
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .badge{
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    .back-btn{
+        width: 100%;
+        text-align: left;
+        padding-bottom: 15px;
+    }
+
+    .input{
+        width: 100%;
+        max-width: 100%;
+    }
 
 }
